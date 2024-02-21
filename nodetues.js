@@ -13,8 +13,8 @@ app.get('/fact/:num',function(req,res){
 })
 
     app.get('/multiply/:num',function(req,res){
-    var multiply=multiplication((req.params.num))
-    res.json("the multiplication table of this number is " + multiply)})
+        var multiply=multiplication((req.params.num))
+        res.json("the multiplication table of this number is " + multiply)})
     
     app.get('/fib/:num',function(req,res){
         var fib=fibonacci(req.params.num)
@@ -25,10 +25,9 @@ app.get('/fact/:num',function(req,res){
         res.json("the commulative of this number is " + comm)})
         
     app.get('/word/:string',function(req,res) {
- 
-            const word =req.params.string
-            const result =stringa(word)
-            res.json( result)})
+        const word =req.params.string
+        const result =stringa(word)
+        res.json( result)})
         
     var server= app.listen(9000, function(){
     var host = server.address().address
